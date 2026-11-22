@@ -57,7 +57,7 @@ async function loadDayList(){
  await buildHistory();
  const sel=$('dayPick');sel.replaceChildren();for(const date of historyAllDays)sel.append(new Option(date,date));sel.value=currentDate;renderDayCounts();
 }
-const historyIdentity=it=>{const n=x=>String(x||'').trim().replace(/\s+/g,' ');return it.phone&&it.name?JSON.stringify([n(it.ticket),n(it.phone),n(it.name),n(it.address),n(it.device),n(it.problem)]):it.id;};
+const historyIdentity=it=>{const n=x=>String(x||'').trim().replace(/\s+/g,' ');return it.name&&(it.phone||(it.address&&it.device&&it.problem))?JSON.stringify([n(it.ticket),n(it.phone),n(it.name),n(it.address),n(it.device),n(it.problem)]):it.id;};
 async function buildHistory(){
  const byDay=new Map();for(const snap of historySnapshots.slice().sort((a,b)=>a.revision-b.revision)){
   if(!byDay.has(snap.date))byDay.set(snap.date,new Map());const rows=byDay.get(snap.date);
