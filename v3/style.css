@@ -3,3 +3,17 @@
 .archiveRow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.archiveRow button{margin:0;font-size:12px}
 /* Account-based workspace */
 dialog{width:min(640px,calc(100% - 24px));max-height:88dvh;overflow:auto;border:1px solid var(--line,#dce5df);border-radius:22px;padding:24px;color:var(--ink,#20362e);box-shadow:0 24px 90px #143a2c33}dialog::backdrop{background:#102b23a8}dialog form{display:grid;gap:14px}dialog input,dialog textarea,dialog select{width:100%;box-sizing:border-box}dialog textarea{min-height:80px;font:inherit;border:1px solid #dce5df;border-radius:10px;padding:10px}.cardactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.cardactions button{font-size:.87rem;padding:9px 12px}.routeStop{padding:14px 8px;border-bottom:1px solid #e3ebe6}.routeStop p{margin:6px 0}.routeStop .cardactions{margin:8px 0}#route{padding-inline-start:25px}#userNav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;align-items:center}#userNav[hidden]{display:none}#who{font-size:.85rem}summary{cursor:pointer;padding:16px 0;font-weight:700}#accounts{display:grid;gap:8px}#globalStatus:empty{display:none}@media(max-width:500px){dialog{padding:18px}.topline{align-items:flex-start;gap:12px}#userNav{max-width:190px}.sectionline{flex-wrap:wrap}.archiveRow{flex-wrap:wrap;gap:10px}}
+/* V4 features: closures, day history, customer directory, internet call */
+.closednote{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-top:12px;font-size:13px}
+.closednote .small{margin:4px 0 0}
+fieldset.outcomes{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:8px;margin:4px 0}
+fieldset.outcomes legend{font-size:13px;font-weight:bold;padding:0 6px}
+fieldset.outcomes label{display:flex;align-items:center;gap:8px;font-weight:normal;margin:0}
+fieldset.outcomes input{width:auto!important;min-height:0}
+.dirhead{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.dirhead input{flex:1;min-width:200px}
+.callbox{display:grid;gap:10px}
+.callbox .linkrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.callbox .linkrow code{direction:ltr;background:var(--soft);border-radius:8px;padding:8px 10px;font-size:12px;word-break:break-all;flex:1}
+#historyBanner{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+#historyBanner[hidden]{display:none}
