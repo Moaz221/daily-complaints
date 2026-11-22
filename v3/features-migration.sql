@@ -7,6 +7,7 @@ create table public.complaint_closures (
   complaint_id uuid not null unique,
   work_date date not null,
   closed_by uuid not null references public.app_profiles(id),
+  closed_by_name text,
   outcome text not null check (outcome in ('إنهاء خدمة','استكمال قطعة غيار','تأجيل','رفض إصلاح','إلغاء البلاغ','استكمال شحن')),
   charge text check (charge in ('paid','free')),
   note text not null check (length(note) between 1 and 500),
@@ -64,3 +65,6 @@ end;
 $$;
 revoke all on function public.save_customer_directory(jsonb, bigint) from public, anon;
 grant execute on function public.save_customer_directory(jsonb, bigint) to authenticated;
+
+-- applied as a hotfix on 2026-11-22 after the initial migration:
+-- alter table public.complaint_closures add column if not exists closed_by_name text;
