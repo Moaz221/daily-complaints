@@ -1,0 +1,19 @@
+/* Display-only usability refinements */
+.mobile-screen-picker{display:none}
+#count{font-size:.85rem;color:var(--muted,#52665f)}
+#emptyReset{margin-inline-start:.75rem}
+input[type="search"]{scroll-margin-top:1.5rem}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #aa650e;outline-offset:3px}
+#screenNav .screen-tab{scroll-margin-inline:12px}
+@media(max-width:700px){
+ .mobile-screen-picker{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1rem;font-weight:700}
+ .mobile-screen-picker select{width:100%;font-size:1rem;min-height:48px;background:#fff}
+ #screenNav,.nav-help{display:none}
+ #workspace{min-width:0}
+ .controls .filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.75rem}
+ .controls .filters label{min-width:0}
+ .controls .filters select{width:100%;min-width:0}
+ .controls .filters button{align-self:end;min-height:44px}
+ .day-panel .sectionline{align-items:start}
+ #emptyReset{display:block;margin:.75rem 0 0}
+}
